@@ -1,0 +1,43 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "com.williambl.haema",
+		"id": "haema_extras_blanketcon",
+		"version": "${version}",
+		"metadata": {
+			"name": "Haema Extras: BlanketCon",
+			"description": "Some extra content to make Haema's BlanketCon booth a bit more fun.",
+			"contributors": {
+				"Will BL": "Owner"
+			},
+			"contact": {
+				"homepage": "https://willbl.dev/",
+				"issues": "https://github.com/williambl/haema-extras-blanketcon/issues",
+				"sources": "https://github.com/williambl/haema-extras-blanketcon"
+			},
+			"icon": "assets/haema_extras_blanketcon/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "com.williambl.haema.extras.blanketcon.HaemaExtrasBlanketconEntrypoint"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.16.0-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=1.0.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.18.2"
+			},
+			{
+				"id": "haema",
+				"versions": ">=1.9.6"
+			}
+		]
+	}
+}
