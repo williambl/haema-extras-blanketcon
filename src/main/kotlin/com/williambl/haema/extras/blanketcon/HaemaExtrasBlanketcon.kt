@@ -7,6 +7,7 @@ import net.minecraft.sounds.SoundEvent
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.Item
+import net.minecraft.world.item.Rarity
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.entity.BlockEntityType
 import net.minecraft.world.level.block.state.BlockBehaviour
@@ -18,7 +19,10 @@ import org.slf4j.LoggerFactory
 object HaemaExtrasBlanketcon: ModInitializer {
     val LOGGER = LoggerFactory.getLogger(HaemaExtrasBlanketcon::class.java)
 
-    val ITEM_GROUP: CreativeModeTab = QuiltItemGroup.builder(id("blanketcon"))/*.icon { HAEMA_SHOWCASE_TRAVEL_TOKEN.defaultInstance }*/.build()
+    val ITEM_GROUP: CreativeModeTab = QuiltItemGroup.builder(id("blanketcon")).icon { HAEMA_SHOWCASE_TRAVEL_TOKEN.defaultInstance }.build()
+
+    val HAEMA_SHOWCASE_TRAVEL_TOKEN: Item = Registry.register(Registry.ITEM, id("haema_showcase_travel_token"), Item(Item.Properties().tab(ITEM_GROUP).stacksTo(1).rarity(Rarity.RARE)))
+    val CAMPSITE_TRAVEL_TOKEN: Item = Registry.register(Registry.ITEM, id("campsite_travel_token"), Item(Item.Properties().tab(ITEM_GROUP).stacksTo(1).rarity(Rarity.RARE)))
 
     override fun onInitialize(mod: ModContainer) {
     }
