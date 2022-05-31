@@ -154,6 +154,13 @@ repositories {
 			includeGroup "curse.maven"
 		}
 	}
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+		content {
+			includeGroup "maven.modrinth"
+		}
+	}
 
 	mavenLocal()
 	mavenCentral()
@@ -171,6 +178,10 @@ dependencies {
 
 	modImplementation libs.quilted.fabric.api
 	modImplementation(libs.haema) {
+		exclude(group: "net.fabricmc.fabric-api")
+		exclude(module: "fabric-loader")
+	}
+	modImplementation(libs.arcanus) {
 		exclude(group: "net.fabricmc.fabric-api")
 		exclude(module: "fabric-loader")
 	}
