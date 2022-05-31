@@ -19,7 +19,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.williambl.haema.extras.blanketcon.HaemaExtrasBlanketconEntrypoint"
+			"init": "com.williambl.haema.extras.blanketcon.HaemaExtrasBlanketconEntrypoint",
+			"client_init": "com.williambl.haema.extras.blanketcon.client.HaemaExtrasBlanketconClientEntrypoint"
 		},
 		"depends": [
 			{

@@ -1,6 +1,7 @@
 package com.williambl.haema.extras.blanketcon
 
 import com.williambl.haema.ritual.RitualModule
+import dev.cammiescorner.arcanus.Arcanus
 import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.CreativeModeTab
@@ -20,6 +21,8 @@ object HaemaExtrasBlanketcon: ModInitializer {
     val CAMPSITE_TRAVEL_TOKEN: Item = Registry.register(Registry.ITEM, id("campsite_travel_token"), Item(Item.Properties().tab(ITEM_GROUP).stacksTo(1).rarity(Rarity.RARE)))
 
     val TELEPORT_RITUAL_ACTION: TeleportRitualAction = Registry.register(RitualModule.RITUAL_ACTION_REGISTRY, id("teleport"), TeleportRitualAction)
+
+    val BLOOD_DRAIN_SPELL: BloodDrainSpell = Registry.register(Arcanus.SPELL, id("blood_drain"), BloodDrainSpell)
 
     override fun onInitialize(mod: ModContainer) {
     }
