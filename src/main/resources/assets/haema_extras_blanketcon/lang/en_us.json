@@ -1,5 +1,6 @@
 {
   "itemGroup.haema_extras_blanketcon.blanketcon": "Haema Extras: BlanketCon",
   "item.haema_extras_blanketcon.haema_booth_travel_token": "Haema Booth Travel Token",
-  "item.haema_extras_blanketcon.campsite_travel_token": "Campsite Travel Token"
+  "item.haema_extras_blanketcon.campsite_travel_token": "Campsite Travel Token",
+  "block.haema_extras_blanketcon.blood_splatter": "Blood Splatter"
 }

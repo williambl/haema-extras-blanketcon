@@ -4,6 +4,7 @@ import com.williambl.haema.ritual.RitualModule
 import dev.cammiescorner.arcanus.Arcanus
 import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Rarity
@@ -23,6 +24,9 @@ object HaemaExtrasBlanketcon: ModInitializer {
     val TELEPORT_RITUAL_ACTION: TeleportRitualAction = Registry.register(RitualModule.RITUAL_ACTION_REGISTRY, id("teleport"), TeleportRitualAction)
 
     val BLOOD_DRAIN_SPELL: BloodDrainSpell = Registry.register(Arcanus.SPELL, id("blood_drain"), BloodDrainSpell)
+
+    val BLOOD_SPLATTER_BLOCK: BloodSplatterBlock = Registry.register(Registry.BLOCK, id("blood_splatter"), BloodSplatterBlock)
+    val BLOOD_SPLATTER_ITEM: BlockItem = Registry.register(Registry.ITEM, id("blood_splatter"), BlockItem(BLOOD_SPLATTER_BLOCK, Item.Properties().tab(ITEM_GROUP)))
 
     override fun onInitialize(mod: ModContainer) {
     }

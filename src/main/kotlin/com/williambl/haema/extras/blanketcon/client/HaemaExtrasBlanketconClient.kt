@@ -1,11 +1,14 @@
 package com.williambl.haema.extras.blanketcon.client
 
+import com.williambl.haema.extras.blanketcon.HaemaExtrasBlanketcon
 import com.williambl.haema.extras.blanketcon.HaemaExtrasBlanketcon.id
 import com.williambl.haema.extras.blanketcon.TeleportRitualAction
+import net.minecraft.client.renderer.RenderType
 import net.minecraft.core.particles.DustParticleOptions
 import net.minecraft.world.phys.Vec3
 import org.quiltmc.loader.api.ModContainer
 import org.quiltmc.qsl.base.api.entrypoint.client.ClientModInitializer
+import org.quiltmc.qsl.block.extensions.api.client.BlockRenderLayerMap
 import org.quiltmc.qsl.networking.api.client.ClientPlayNetworking
 
 object HaemaExtrasBlanketconClient: ClientModInitializer {
@@ -34,5 +37,7 @@ object HaemaExtrasBlanketconClient: ClientModInitializer {
                 client.level?.let { TeleportRitualAction.showTeleportEffects(it, centre) }
             }
         }
+
+        BlockRenderLayerMap.put(RenderType.cutout(), HaemaExtrasBlanketcon.BLOOD_SPLATTER_BLOCK)
     }
 }

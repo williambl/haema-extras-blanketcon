@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "haema_extras_blanketcon:block/blood_splatter"
+  }
+}

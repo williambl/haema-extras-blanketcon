@@ -1,0 +1,44 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "haema_extras_blanketcon:block/blood_splatter",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "haema_extras_blanketcon:block/blood_splatter",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "haema_extras_blanketcon:block/blood_splatter",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "haema_extras_blanketcon:block/blood_splatter",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": [
+      {
+        "model": "haema_extras_blanketcon:block/blood_splatter"
+      },
+      {
+        "model": "haema_extras_blanketcon:block/blood_splatter",
+        "y": 90
+      },
+      {
+        "model": "haema_extras_blanketcon:block/blood_splatter",
+        "y": 180
+      },
+      {
+        "model": "haema_extras_blanketcon:block/blood_splatter",
+        "y": 270
+      }
+    ],
+    "facing=west": {
+      "model": "haema_extras_blanketcon:block/blood_splatter",
+      "x": 90,
+      "y": 270
+    }
+  }
+}
