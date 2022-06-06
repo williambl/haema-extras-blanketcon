@@ -185,6 +185,14 @@ dependencies {
 		exclude(group: "net.fabricmc.fabric-api")
 		exclude(module: "fabric-loader")
 	}
+	modImplementation(libs.haema.extras.tech) {
+		exclude(group: "net.fabricmc.fabric-api")
+		exclude(module: "fabric-loader")
+	}
+	include(libs.haema.extras.tech) {
+		exclude(group: "net.fabricmc.fabric-api")
+		exclude(module: "fabric-loader")
+	}
 }
 
 processResources {
