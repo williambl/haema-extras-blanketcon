@@ -1,6 +1,7 @@
 package com.williambl.haema.extras.blanketcon.client
 
 import com.williambl.haema.extras.blanketcon.HaemaExtrasBlanketcon.id
+import com.williambl.haema.extras.blanketcon.TeleportRitualAction
 import net.minecraft.core.particles.DustParticleOptions
 import net.minecraft.world.phys.Vec3
 import org.quiltmc.loader.api.ModContainer
@@ -23,6 +24,14 @@ object HaemaExtrasBlanketconClient: ClientModInitializer {
                         client.level?.addParticle(DustParticleOptions.REDSTONE, pos.x, pos.y, pos.z, vel.x, vel.y, vel.z)
                     }
                 }
+            }
+        }
+
+        ClientPlayNetworking.registerGlobalReceiver(id("teleport_fx")) { client, handler, buf, sender ->
+            val centre = Vec3(buf.readDouble(), buf.readDouble(), buf.readDouble())
+
+            client.execute {
+                client.level?.let { TeleportRitualAction.showTeleportEffects(it, centre) }
             }
         }
     }
